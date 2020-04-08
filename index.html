@@ -17,10 +17,10 @@
           <video id="cv" autoplay loop="true" src="video/videocv.mp4" webkit-playsinline playsinline></video>
         </a-assets>
 
-        <a-marker preset="hiro">
+        <!-- <a-marker preset="hiro">
             <a-video src="#cv" width="2" height="1.25" position="0 0 0" rotation="90 0 0"></a-video>
             <a-plane material="src:#cv" video-handler></a-plane>
-        </a-marker>
+        </a-marker> -->
 
        
 
@@ -30,22 +30,7 @@
         </a-scene>
     </body>
 
-    <script type="text/javascript">
-        AFRAME.registerComponent('video-handler',{
-          init, functon(){
-           let el = this.el;
-           let vid = document.querySelector("#cv");
-           vid.pause();
-           el.addEventListener('mouseenter',function(){
-              vid.play();
-           });
-           el.addEventListener('mouseleave',function(){
-              vid.pause();
-           });
-          }
-        });        
 
-    </script>
 </html>
 
 
