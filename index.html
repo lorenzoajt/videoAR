@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
     </head>
    
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
@@ -13,11 +14,11 @@
         <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
-          <video id="cv" autoplay loop="true" src="video/videocv.mp4"></video>
+          <video id="cv" autoplay loop="true" src="video/videocv.mp4" webkit-playsinline playsinline></video>
         </a-assets>
 
         <a-marker preset="hiro">
-            <a-video src="#cv" width="16" height="9" position="0 0 -20"></a-video>
+            <a-video src="#cv" width="4" height="2.25" position="0 0 0"></a-video>
         </a-marker>
 
         <a-entity camera></a-entity>
